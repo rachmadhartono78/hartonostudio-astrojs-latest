@@ -22,8 +22,10 @@ export default config({
                 content: fields.mdx({
                     label: 'Content',
                     options: {
-                        imageDirectory: 'src/assets',
-                        publicPath: '../../assets/',
+                        image: {
+                            directory: 'src/assets',
+                            publicPath: '../../assets/',
+                        }
                     },
                 }),
             },
