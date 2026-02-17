@@ -13,34 +13,87 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Halo, Saya Rachmad! 👋</h1>
-			<p>
-				Selamat datang di ruang digital saya. Ini adalah tempat saya mendokumentasikan perjalanan, eksperimen, dan ide-ide saya dalam berbagai bidang yang saya cintai.
-			</p>
-			<p>
-				Berikut adalah 9 hal yang mendefinisikan siapa saya dan apa yang sedang saya kerjakan:
-			</p>
-			<ul>
-				<li>💾 <strong>Database Administrator</strong> — Mengelola integritas dan performa data skala besar.</li>
-				<li>💻 <strong>Software Engineer</strong> — Merancang bangun solusi teknologi yang efisien dan berdampak.</li>
-				<li>📈 <strong>Bisnis & UMKM</strong> — Membangun <em>Mini Tech Industry</em> untuk memberdayakan usaha kecil.</li>
-				<li>🏠 <strong>Review Properti</strong> — Mengulik rumah dan tanah potensial di sudut-sudut Jogja.</li>
-				<li>🍜 <strong>Kuliner Jogja</strong> — Berburu rekomendasi makanan enak bersama Mbak Raisa.</li>
-				<li>🔬 <strong>Lab Eksplorasi</strong> — Ruang bermain kecil-kecilan untuk eksperimen teknologi masa depan.</li>
-				<li>🏍️ <strong>Otomotif</strong> — <em>Riding</em> santai dan membuat konten seputar dunia otomotif.</li>
-				<li>☕ <strong>Ngopi Culture</strong> — Menikmati suasana dan diskusi di berbagai <em>coffee shop</em> Jogja.</li>
-			</ul>
-			
-			<div style="margin-top: 2rem; padding: 1.5rem; background-color: #f3f4f6; border-radius: 8px; border-left: 4px solid var(--accent);">
-				<h3 style="margin-top: 0;">🚀 Mari Berkolaborasi!</h3>
+			<div class="intro">
+				<h1>Rachmad Hartono.</h1>
 				<p>
-					Punya ide bisnis, butuh solusi teknologi, atau sekadar ingin diskusi soal properti dan kopi di Jogja? 
-					Saya selalu terbuka untuk peluang kolaborasi yang menarik.
-				</p>
-				<p style="margin-bottom: 0;">
-					<a href="mailto:contact@rachmad.com" style="display: inline-block; background-color: var(--accent); color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 5px; font-weight: bold;">Hubungi Saya</a>
+					Database Administrator, Software Engineer, dan pengamat bisnis yang tinggal di Jogja. 
+					Saya suka membangun sistem yang efisien, membantu UMKM, dan menikmati hidup melalui kuliner serta otomotif.
 				</p>
 			</div>
+
+			<div class="grid">
+				<div class="card">
+					<h3>Tech & Karier</h3>
+					<p>Sehari-hari saya bekerja mengelola database skala besar dan membangun software. Saya juga bereksperimen di <em>Lab Eksplorasi</em> pribadi saya.</p>
+				</div>
+				<div class="card">
+					<h3>Bisnis & UMKM</h3>
+					<p>Membangun <em>Mini Tech Industry</em>, sebuah inisiatif kecil untuk membantu UMKM naik kelas dengan teknologi tepat guna.</p>
+				</div>
+				<div class="card">
+					<h3>Jogja & Lifestyle</h3>
+					<p>Bersama Mbak Raisa, saya sering mereview rumah, tanah, dan kuliner enak di Jogja. Kalau tidak sedang koding, saya biasanya motoran atau ngopi.</p>
+				</div>
+			</div>
+			
+			<div class="cta">
+				<p>
+					Mau diskusi soal teknologi, bisnis, atau tanya rekomendasi tempat ngopi?
+				</p>
+				<a href="mailto:contact@rachmad.com" class="button">Kontak Saya</a>
+			</div>
+			
+			<style>
+				.intro {
+					margin-bottom: 3rem;
+				}
+				.intro h1 {
+					font-size: 3rem;
+					margin-bottom: 0.5rem;
+				}
+				.intro p {
+					font-size: 1.2rem;
+					color: var(--gray);
+				}
+				.grid {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 2rem;
+					margin-bottom: 3rem;
+				}
+				@media (min-width: 768px) {
+					.grid {
+						grid-template-columns: repeat(3, 1fr);
+					}
+				}
+				.card h3 {
+					margin-top: 0;
+					font-size: 1.2rem;
+					border-bottom: 2px solid var(--accent);
+					padding-bottom: 0.5rem;
+					display: inline-block;
+					margin-bottom: 1rem;
+				}
+				.cta {
+					text-align: center;
+					margin-top: 4rem;
+					padding-top: 2rem;
+					border-top: 1px solid #eee;
+				}
+				.button {
+					display: inline-block;
+					background-color: var(--black);
+					color: white;
+					padding: 0.8rem 1.5rem;
+					text-decoration: none;
+					border-radius: 4px;
+					font-weight: bold;
+					transition: background-color 0.2s;
+				}
+				.button:hover {
+					background-color: var(--accent);
+				}
+			</style>
 		</main>
 		<Footer />
 	</body>
